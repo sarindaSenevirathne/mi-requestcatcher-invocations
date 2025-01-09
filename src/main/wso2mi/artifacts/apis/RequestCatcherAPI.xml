@@ -1,0 +1,16 @@
+<api xmlns="http://ws.apache.org/ns/synapse" name="RequestCatcherAPI" context="/requestCatcher">
+    <resource methods="GET" uri-template="/invoke">
+        <inSequence>
+            <log level="custom">
+                <property name="message" value="Received the request, now invoking the request catcher endpoint."/>
+            </log>
+            <call>
+                <endpoint key="RequestCatcherEndpoint"/>
+            </call>
+            <log level="custom">
+                <property name="response" expression="get-property('message')"/>
+            </log>
+            <respond/>
+        </inSequence>
+    </resource>
+</api>
