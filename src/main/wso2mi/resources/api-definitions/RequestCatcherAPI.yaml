@@ -11,3 +11,8 @@ paths:
       responses:
         default:
           description: Default response
+  /healthz:
+    get:
+      responses:
+        default:
+          description: Default response

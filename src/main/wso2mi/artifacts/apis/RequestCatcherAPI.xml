@@ -13,4 +13,13 @@
             <respond/>
         </inSequence>
     </resource>
+    <resource methods="GET" uri-template="/healthz">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>{"status": "Service is up and running"}</format>
+                <args/>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+    </resource>
 </api>
