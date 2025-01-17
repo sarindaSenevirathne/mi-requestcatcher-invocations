@@ -19,6 +19,7 @@
                 <format>{"status": "Service is up and running"}</format>
                 <args/>
             </payloadFactory>
+            <class name="org.sample.LogTransportHeaders"/>
             <respond/>
         </inSequence>
     </resource>
